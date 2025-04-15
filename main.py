@@ -5,6 +5,7 @@ data = pandas.read_csv("nato_phonetic_alphabet.csv")
 # Create dictionary
 data_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 
+
 def generate_phonetic():
     user_input = input("Insert a word: ").upper()
     try:
@@ -15,5 +16,6 @@ def generate_phonetic():
         generate_phonetic()
     else:
         print(phonetic_list)
+
 
 generate_phonetic()
